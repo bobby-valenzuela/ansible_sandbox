@@ -1,0 +1,9 @@
+# File lives at /etc/ansible/hosts
+
+[droplets]
+centos-node ansible_host=10.124.0.3 ansible_connection=ssh ansible_user=bobby ansible_port=22 ansible_ssh_private_key_file=/home/bobby/.ssh/id_rsa ansible_become=yes ansible_become_method=su ansible_become_user=root ansible_become_password=/^centos$/gi
+fedora-node ansible_host=10.124.0.4 ansible_connection=ssh ansible_user=bobby ansible_port=22 ansible_ssh_private_key_file=/home/bobby/.ssh/id_rsa ansible_become=yes ansible_become_method=su ansible_become_user=root ansible_become_password=/^fedora$/gi
+
+
+#[droplets:vars]
+#ansible_user=bobby
